@@ -54,7 +54,7 @@
     "react-dom": "^15.6.2",
     "rimraf": "^2.6.2",
     "sinon": "^5.0.0",
-    "style-loader": "^0.17.0"
+    "style-loader": "^0.21.0"
   },
   "peerDependencies": {
     "react": ">=0.14"
