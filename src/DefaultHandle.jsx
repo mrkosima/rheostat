@@ -99,7 +99,7 @@ export default withStyles(({ rheostat: { color, unit, constants } }) => ({
 
   DefaultHandle_handle__vertical: {
     marginTop: -(constants.DEFAULT_HANDLE_WIDTH) * unit,
-    left: (constants.BACKGROUND_HEIGHT - constants.DEFAULT_HANDLE_WIDTH) * unit,
+    left: -2,
 
     ':before': {
       top: 10,

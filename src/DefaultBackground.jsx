@@ -38,8 +38,6 @@ DefaultBackground.defaultProps = defaultProps;
 export default withStyles(({ rheostat: { color, unit } }) => ({
   DefaultBackground: {
     backgroundColor: color.white,
-    height: (2 * unit) - 1,
-    width: '100%',
     border: `1px solid ${color.grey}`,
     position: 'relative',
   },

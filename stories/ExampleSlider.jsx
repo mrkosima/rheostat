@@ -31,7 +31,9 @@ export default class LabeledSlider extends React.Component {
         style={{
           margin: '10% auto',
           height: '50%',
-          width: '50%',
+          left: '10%',
+          right: '10%',
+          position: 'absolute',
         }}
       >
         <Rheostat

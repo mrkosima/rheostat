@@ -66,13 +66,13 @@ export default withStyles(({ rheostat: { color, unit } }) => ({
 
   DefaultProgressBar_progressBar__vertical: {
     height: '100%',
-    width: 3 * unit,
   },
 
   DefaultProgressBar_background__vertical: {
     height: '100%',
-    top: 0,
-    width: (2 * unit) - 1,
+    marginTop: 2,
+    left: 2,
+    width: (2 * unit) - 3,
   },
 
   DefaultProgressBar_background__horizontal: {

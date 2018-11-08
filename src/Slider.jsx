@@ -516,7 +516,7 @@ class Rheostat extends React.Component {
   }
 
   positionPercent(x, y, sliderBox) {
-    const { orientation } = this.state;
+    const { orientation } = this.props;
     if (orientation === VERTICAL) {
       return ((y - sliderBox.top) / sliderBox.height) * PERCENT_FULL;
     }
@@ -793,6 +793,7 @@ class Rheostat extends React.Component {
           ref={this.setHandleContainerNode}
           {...css(
             styles.handleContainer,
+            orientation === VERTICAL ? styles.handleContainer__vertical : styles.handleContainer__horizontal,
           )}
         >
           {handlePos.map((pos, idx) => {
@@ -830,6 +831,7 @@ class Rheostat extends React.Component {
             <ProgressBar
               key={idx /* eslint-disable-line react/no-array-index-key */}
               style={this.getProgressStyle(idx)}
+              orientation={orientation}
               disabled={disabled}
             />
           );
@@ -877,12 +879,20 @@ export default withStyles(({ rheostat: { color, unit, responsive } }) => ({
   },
 
   handleContainer: {
-    height: (2 * unit) - 1,
     top: -2,
     left: -2,
     bottom: 4,
-    width: '100%',
     position: 'absolute',
+  },
+
+  handleContainer__horizontal: {
+    height: (2 * unit) - 1,
+    width: '100%',
+  },
+
+  handleContainer__vertical: {
+    width: (2 * unit) - 1,
+    height: '100%',
   },
 
   rheostat_background: {
